@@ -1,0 +1,25 @@
+@model IList<MyLibrary.mvc.ViewModels.SerieListViewModel>
+     <body>
+        <header>
+            <nav class="movienavbar">
+                <a class="movienavbara" asp-action="Create" asp-controller="Serie">Lägg Till</a>
+            
+            </nav>
+        
+        </header>
+    </body>
+    
+
+    <section class="page">
+        <h1 class="maintext">Kollade serier</h1>
+        
+        <div>
+           @foreach (var serie in Model)
+           {    
+                 
+                <div> 
+                    <a class="text-primary" asp-controller="series" asp-action="details" asp-route-id="@serie.Id">@serie.Name</a>
+                </div>
+           } 
+        </div> 
+    </section>

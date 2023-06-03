@@ -1,0 +1,38 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="~/css/colors.css">
+    <link rel="stylesheet" href="~/css/list-details.css">
+    <link rel="stylesheet" href="~/css/movie-detail-page.css">
+    <link rel="stylesheet" href="~/css/Navigation.css">
+    @RenderSection("styles", false)
+    <link rel="stylesheet" href="~/css/list-details.css">
+    <link rel="stylesheet" href="~/css/form-page.css">
+    <title>@ViewData["Title"] - Timtams Library</title>
+    
+    
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <h1> <p>Timtams <br> Library </p> </h1>
+            <ul>
+                <li><a asp-action="Index" asp-controller="Home">Home</a></li>
+                <li><a asp-action="Index" asp-controller="Movie">Movies</a></li>
+                <li><a asp-action="Index" asp-controller="Serie">Series</a></li>
+                
+                
+            </ul>
+        </nav>
+    </header>
+    <div class="container">
+        
+            @RenderBody()
+        </main>
+    </div>
+
+    
+</body>
+</html>

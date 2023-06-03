@@ -1,0 +1,43 @@
+@model MyLibrary.mvc.ViewModels.SeriePostViewModel
+
+<section class="page">
+    <h1 class="page-title">Lägg till serie</h1>
+    <form asp-action="Create" method="post">
+        <div class="form-control">
+            <label asp-for="Name"></label>
+            <input asp-for="Name" type="text">
+            <span class="error" asp-validation-for="Name"></span>
+        </div>
+        <div class="form-control">
+            <label asp-for="GenreType"></label>
+            <input asp-for="GenreType" type="text">
+            <span class="error" asp-validation-for="GenreType"></span>
+        </div>
+        <div class="form-control">
+            <label asp-for="ReleaseDate"></label>
+            <input asp-for="ReleaseDate" type="text">
+            <span class="error" asp-validation-for="ReleaseDate"></span>
+        </div>
+        <div class="form-control">
+            <label asp-for="Seasons"></label>
+            <input asp-for="Seasons" type="text">
+            <span class="error" asp-validation-for="Seasons"></span>
+        </div>
+        <div class="form-control">
+            <label asp-for="SiteName"></label>
+            <input asp-for="SiteName" type="text">
+            <span class="error" asp-validation-for="SiteName"></span>
+        </div>
+        <div class="form-control">
+            <label asp-for="Description"></label>
+            <textarea asp-for="Description"></textarea>
+            <span class="error" asp-validation-for="Description"></span>
+        </div>
+        
+        <div class="form-control">
+            <div class="form-page">
+                <button class="btn btn-spara">Spara</button>
+                <button class="btn btn-avbryt"><a asp-action="Index">Avbryt</a></button>
+            </div>
+    </form>
+</section>

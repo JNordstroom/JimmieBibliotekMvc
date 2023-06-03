@@ -1,0 +1,24 @@
+@model IList<MyLibrary.mvc.ViewModels.MovieListViewModel>
+    <body>
+        <header>
+            <nav class="movienavbar">
+                <a class="movienavbara" asp-action="Create" asp-controller="Movie">Lägg Till</a>
+            
+            </nav>
+        
+        </header>
+    </body>
+    
+
+    <section class="page">
+        <h1 class="maintext">Kollade filmer</h1>
+        
+        <div>
+           @foreach (var movie in Model)
+           {    
+                <div> 
+                    <a class="text-primary" asp-controller="movies" asp-action="details" asp-route-id="@movie.Id">@movie.Name</a>
+                </div>
+           } 
+        </div> 
+    </section>
